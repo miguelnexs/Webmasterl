@@ -78,3 +78,20 @@ function toggleVerMas(element) {
 }
 
 
+$(document).ready(function(){
+    $('#newsletterForm').on('submit', function(event){
+        event.preventDefault(); // Detiene el envío del formulario
+        $.ajax({
+            url: $(this).attr('action'),
+            method: 'POST',
+            data: $(this).serialize(),
+            success: function(response) {
+                $('#formMessage').html(response); // Muestra la respuesta en el div
+            },
+            error: function() {
+                $('#formMessage').html('Hubo un error al enviar tu suscripción. Por favor, intenta nuevamente.');
+            }
+        });
+    });
+});
+

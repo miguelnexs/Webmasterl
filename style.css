@@ -6,6 +6,11 @@ body {
     background-position: center;
 }
 
+.header .enlaces {
+    display: flex;
+    opacity: 1;
+    animation: fadeIn 1s forwards;
+}
 
 
 .logo{
@@ -64,7 +69,6 @@ body::-webkit-scrollbar {
 
 
 .principal {
-    
     height: 100vh;
     width: 100%;
     display: flex;
@@ -407,11 +411,6 @@ body::-webkit-scrollbar {
     .header .enlaces {
         display: none; /* Ocultar enlaces de navegación en tamaños de pantalla pequeños */
     }
-
-    .boton{
-        display: none;
-    }
-
 
     .principal{
         height: 70vh;

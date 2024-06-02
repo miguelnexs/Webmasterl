@@ -1,0 +1,172 @@
+
+.titulo h1 {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+
+.principal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+}
+.dashboard img {
+    width: 70px;
+}
+
+
+.dashboard {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    top: 0;
+    background: transparent;
+    backdrop-filter: blur(30px);
+    color: #333;
+
+}
+
+.servicios {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.servicios:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+}
+
+.servicios i {
+    margin-bottom: 20px;
+    color: #007BFF;
+    font-size: 4em;
+}
+
+.especializacion {
+    text-align: center;
+}
+
+.especializacion h3 {
+    margin: 10px 0;
+    font-size: 1.6em;
+    color: #333;
+}
+
+.especializacion p {
+    margin: 15px 0 10px;
+    color: #666;
+    font-size: 1.1em;
+}
+
+.especializacion ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    max-height: 140px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.especializacion ul.expandido {
+    max-height: 300px;
+}
+
+.especializacion ul li {
+    margin: 5px 0;
+    padding-left: 15px;
+    position: relative;
+}
+
+.especializacion ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #007BFF;
+}
+
+.ver-mas {
+    color: #007BFF;
+    cursor: pointer;
+    margin: 30px;
+}
+
+.oferta {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #d9534f;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.ofertas span {
+    font-size: 30px;
+}
+
+.boton a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.boton a:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+}
+
+
+.clientes_satisfechos h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: #fff;
+}
+
+
+.punto-blanco {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    animation: twinkling 3s infinite;
+}
+
+@keyframes twinkling {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+}
+

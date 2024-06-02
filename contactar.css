@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #405484;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo{
+    color: #fff;
+}
+
+/* Oculta las barras de desplazamiento en navegadores WebKit (Chrome, Safari, etc.) */
+body::-webkit-scrollbar {
+    width: 0px; /* Ancho cero */
+    background: transparent; /* Hace que las barras de desplazamiento sean transparentes */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+
+
+.titulo h1{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+
+
+.dashboard img{
+    width: 70px;
+}
+
+
+
+.punto-blanco {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    animation: twinkling 3s infinite;
+}
+
+.principal{
+    background: transparent;
+    backdrop-filter: blur(30px);
+    background-repeat: no-repeat;
+    background-position: cover;
+    height: 120vh;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes twinkling {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+}
+
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.container {
+    
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.footer-links  h4{
+    padding: 15px 0;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a:hover {
+    color: #145f7b;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+
+
+
+.newsletter h4 {
+    margin-bottom: 10px;
+}
+
+.newsletter input[type="email"],
+.newsletter button {
+    padding: 8px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter input[type="email"] {
+    width: 100%;
+    max-width: 200px;
+}
+
+.newsletter button {
+    background-color: #1b7c9e;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.newsletter button:hover {
+    background-color: #145f7b;
+}
+
+/* Estilos para el menú de hamburguesa */
+.menu_hamburguesa {
+    display: none; /* Ocultar menú de hamburguesa por defecto */
+    cursor: pointer;
+    position: relative;
+    z-index: 9999;
+}
+
+.menu_hamburguesa span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+}
+
+/* Estilos para el menú de navegación */
+.enlaces {
+    display: flex;
+    align-items: center;
+}
+
+.enlaces a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.enlaces a:last-child {
+    margin-right: 0;
+}
+
+
+
+#contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 40px;
+}
+
+.formu {
+    padding: 200px;
+    background-size: contain;
+    height: 80vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    background-size: contain; /* Se ajusta el tamaño de la imagen para que se muestre completa */
+    background-position: center;
+    align-items: center;
+    
+}
+
+/* Estilos para el formulario */
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos para el contenedor de la imagen de fondo */
+.imagen_fondo {
+    position: relative;
+    border-radius: 10px;
+    width: 1200px;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para el formulario dentro del contenedor de imagen */
+.formulario-contacto {
+    width: 50%;
+    height: 100%;
+    padding: 30px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 0.5s ease-in-out; /* Animación de entrada */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Estilos para los títulos */
+h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los campos de entrada y etiquetas */
+.input {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input label {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+form h3{
+    font-size: 25px;
+}
+
+.objeto{
+    background-image: url(img/noche.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.input input,
+.input textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color:#dceafc;
+    color: #000000;
+    outline: none;
+    resize: none;
+}
+
+/* Estilos para el botón de envío */
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Estilos para el botón de envío al pasar el cursor */
+input[type="submit"]:hover {
+    background-color: #ddd;
+}
+
+
+.menu_hamburguesa span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+}
+
+
+/* Media query para tamaños de pantalla pequeños */
+@media screen and (max-width: 1000px) {
+
+    body{
+        background-position: 0%;
+    }
+    .header .enlaces {
+        display: none; /* Ocultar enlaces de navegación en tamaños de pantalla pequeños */
+    }
+
+    .boton{
+        display: none;
+    }
+
+
+    .header{
+        background-color: #405484;
+    }
+    
+    .boton_titulo{
+        display: flex;
+        width: 100%;
+        margin: 50px 0 ;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    
+    
+    
+
+    .enlaces.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #4e6394  ;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    
+    .footer-links{
+        display: block;
+        text-align: center;
+    }
+    .imagen_fondo{
+        background-color: transparent;
+        width: 100%;
+        top: 0;
+
+    }
+    .objeto{
+        display: none;
+    }
+
+
+    footer{
+        margin: 20px 0;
+    }
+
+    .principal h3{
+        text-align: center;
+    }
+    
+    .principal{
+        padding:0;
+    }
+
+    .formulario-contacto{
+        justify-content: center;
+        width: 100%;
+       
+    }
+    .menu_hamburguesa {
+        display: block; /* Mostrar menú de hamburguesa en tamaños de pantalla pequeños */
+    }
+    
+    
+        
+    @media screen and (max-height: 800px) {
+        .formulario-contacto{
+            transform: scale(1);
+        }
+    }
+
+
+    
+}
+
+
+
