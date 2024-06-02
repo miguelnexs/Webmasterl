@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    background-image: url(img/fondo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.logo{
+    color: #fff;
+}
+
+/* Oculta las barras de desplazamiento en navegadores WebKit (Chrome, Safari, etc.) */
+body::-webkit-scrollbar {
+    width: 0px; /* Ancho cero */
+    background: transparent; /* Hace que las barras de desplazamiento sean transparentes */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Cambiado para distribuir los elementos */
+    padding: 20px 15px; /* Ajuste de padding */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent; /* Añadido fondo blanco */
+    backdrop-filter: blur(40px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añadida sombra */
+    z-index: 99;
+    width: 100%;
+    
+}
+
+.header .enlaces {
+    display: flex; /* Añadido para alinear los enlaces */
+    
+}
+
+.header .enlaces a {
+    display: inline-block;
+    padding: 10px 20px; /* Ajuste de padding */
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid transparent; /* Cambiado borde sólido */
+    transition: border-color 0.3s; /* Añadida transición */
+}
+
+.header .enlaces a:hover {
+    color: #cde1f6;
+}
+
+
+.principal {
+    
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    position: relative; /* Agregado para el posicionamiento de las estrellas */
+    overflow: hidden; /* Agregado para ocultar las estrellas que se salen del contenedor */
+    flex-direction: column;
+}
+
+.titulo_principal {
+    text-align: center;
+    position: relative;
+    top: 60%;
+    z-index: 1; /* Asegura que el texto esté por encima de las estrellas */
+}
+
+.principal .titulo_principal h1 {
+    font-size: 50px; /* Aumentado el tamaño del texto */
+    font-weight: 600; /* Cambiado a un tipo de letra más grueso */
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregado sombreado */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.principal p {
+    font-size: 18px; /* Aumentado el tamaño del texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Agregado sombreado */
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+
+.boton_titulo{
+    display: none;
+}
+
+
+.punto-blanco {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    animation: twinkling 3s infinite;
+}
+
+@keyframes twinkling {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+}
+
+
+
+.globo {
+    position: absolute;
+    bottom: 50%; /* Posicionamiento en la mitad vertical */
+    left: 0; /* Posicionamiento inicial en la izquierda */
+    width: 30px;
+}
+
+
+.globo img{
+    width: 30px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    z-index: 9999;
+    background-color: transparent; /* Cambiado el color de fondo a verde similar al de WhatsApp */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.whatsapp img {
+    width: 50px; /* Ajustado el tamaño de la imagen de WhatsApp */
+    height: 50px;
+    position: relative;
+    transition: 0.5s;
+    
+}
+
+.whatsapp img:hover{
+    transform: scale(1.2);
+}
+
+.qualities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    padding: 0 0 60px;
+}
+.quality {
+    cursor: pointer;
+    width: 370px;
+    height: 130px;
+    padding: 20px 50px;
+    background-color: #397bc1; /* Cambiado a azul oscuro */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenté el tamaño del sombreado */
+    margin-bottom: 50px; /* Espaciado entre los cuadros */
+    transition: border-color 0.6s ease, transform 0.6s ease; /* Transición suave en el cambio de borde y transformación */
+}
+
+.quality:hover {
+    border: 2px solid #1b7c9e; /* Cambio de color del borde al pasar el cursor */
+    transform: translateY(-5px); /* Elevación sutil al pasar el cursor */
+}
+
+.titulo_cualidades {
+    display: flex;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #1c4066; /* Cambiado a azul oscuro */
+    
+}
+
+.especi {
+    text-align: center;
+}
+
+.quality span {
+    color: #fff;
+}
+
+.quality h4,
+.quality p {
+    margin: 0; /* Eliminar el margen predeterminado */
+}
+
+.especi{
+    color: #fff;
+}
+
+.about-section {
+    padding: 80px 0;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    color: #fff; /* Color de fondo de la sección */
+}
+
+.about-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.about-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background-image.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6; /* Opacidad del fondo */
+    z-index: -1;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text {
+    max-width: 600px;
+    line-height: 2;
+}
+
+.about-text h2{
+    padding: 40px 0;
+}
+
+.about-image img {
+   width: 250px;
+    padding: 10px;
+    position: relative;
+    top: 40px;
+}
+.about-image {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.container {
+    
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container1{
+   
+    margin: 0 auto;
+    padding: 0 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.footer-links{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.footer-links  h4{
+    padding: 15px 0;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a:hover {
+    color: #145f7b;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+
+
+.newsletter h4 {
+    margin-bottom: 10px;
+}
+
+.newsletter input[type="email"],
+.newsletter button {
+    padding: 8px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter input[type="email"] {
+    width: 100%;
+    max-width: 200px;
+}
+
+.newsletter button {
+    background-color: #1b7c9e;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.newsletter button:hover {
+    background-color: #145f7b;
+}
+
+/* Estilos para el menú de hamburguesa */
+.menu_hamburguesa {
+    display: none; /* Ocultar menú de hamburguesa por defecto */
+    cursor: pointer;
+    position: relative;
+    z-index: 9999;
+}
+
+.menu_hamburguesa span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+}
+
+/* Estilos para el menú de navegación */
+.enlaces {
+    display: flex;
+    align-items: center;
+}
+
+.enlaces a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.enlaces a:last-child {
+    margin-right: 0;
+}
+
+/* Media query para tamaños de pantalla pequeños */
+@media screen and (max-width: 1000px) {
+
+    body{
+        background-position: 0%;
+    }
+    .header .enlaces {
+        display: none; /* Ocultar enlaces de navegación en tamaños de pantalla pequeños */
+    }
+
+    .boton{
+        display: none;
+    }
+
+
+    .principal{
+        height: 70vh;
+    }
+    
+    .boton_titulo{
+        display: flex;
+        width: 100%;
+        margin: 50px 0 ;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .menu_hamburguesa {
+        display: block; /* Mostrar menú de hamburguesa en tamaños de pantalla pequeños */
+    }
+    .titulo_principal h1{
+        transform: scale(0.9);
+        padding: 0;
+    }
+
+    .titulo_principal p{
+        display: flex;
+        padding: 0 40px;
+        width: 100%;
+        justify-content: center;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .titulo_principal {
+        top: 30%;
+    }
+
+    .header{
+        background-color: #405484;
+        padding: 10px 0;
+    }
+
+    .enlaces.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #405484  ;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-section img{
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-section h2{
+        text-align: center;
+    }
+
+    .about-section p{
+        text-align: center;
+    }
+    .footer-links{
+        display: block;
+        text-align: center;
+    }
+}
+
+
